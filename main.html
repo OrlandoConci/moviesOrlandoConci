@@ -9,35 +9,35 @@
     <title>Moviestack/Home</title>
 </head>
 
-<body class="bg-stone-900 min-h-screen flex flex-col w-full border">
-    <header class="bg-stone-800 p-2 min-h-11 flex justify-between items-center">
+<body class="bg-stone-900 min-h-screen flex flex-col w-full">
+    <header class="bg-stone-800 px-6 lg:px-11 py-2 min-h-11 flex justify-between items-center">
         <div class="flex">
-            <img class="w-10 border object-cover border-white-500 rounded-full" src="./resources/Moviestack_isotipo.png" title="logo" alt="logo de la página">
-            <img class="w-24  object-contain" src="./resources/Moviestack_logotipo2.png" title="nombre" alt="nombre de la página">
+            <img class="w-10 lg:w-14 border object-cover border-white-500 rounded-full" src="./resources/Moviestack_isotipo.png" title="logo" alt="logo de la página">
+            <img class="w-24 lg:w-32 lg:ml-5 object-contain" src="./resources/Moviestack_logotipo2.png" title="nombre" alt="nombre de la página">
         </div>
 
-        <nav class="flex items-center gap-3">
-            <a class="font-[raleway] text-xs text-[#FFFFFF] border p-2" href="./main.html">HOME</a>
-            <a class="font-[raleway] text-xs text-[#FFFFFF]" href="./movies.html">MOVIES</a>
-            <a class="font-[raleway] text-xs text-[#FFFFFF]" href="#">FAVS</a>
+        <nav class="flex items-center gap-3 lg:gap-10">
+            <a class="font-[raleway] text-xs lg:text-xl text-xs text-[#FFFFFF] border p-2" href="./main.html">HOME</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF]" href="./movies.html">MOVIES</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF]" href="#">FAVS</a>
         </nav>
     </header>
 
-    <main class="flex flex-col justify-between items-center m-8">
-        <img class="w-full h-auto object-contain object-top" src="./resources/portada_moviestack.png" title="portada" alt="Portada de la página con películas">
-        <p class="text-center mt-8 text-white">¡Bienvenido a Moviestack! Tu destino cinematográfico definitivo. Explora nuestro
+    <main class="flex flex-col justify-between grow-[2] 2xl:m-16 items-center m-8">
+        <img class="w-full h-auto object-contain lg:object-cover lg:object-top lg:h-80" src="./resources/portada_moviestack.png" title="portada" alt="Portada de la página con películas">
+        <p class="text-center mt-8 text-white 2xl:size-1/2">¡Bienvenido a Moviestack! Tu destino cinematográfico definitivo. Explora nuestro
              extenso catálogo de películas de todos los géneros. Desde clásicos atemporales 
              hasta los estrenos más recientes, ofrecemos críticas, trailers, y recomendaci
              ones personalizadas para satisfacer todos los gustos. Únete a nuestra comunidad
              , comparte tus opiniones y descubre tu próxima película favorita en Moviestack.</p>
         
-        <div class="flex gap-8 mt-8 w-full h-20">
-            <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full hover:bg-red-500" href="./movies.html">CALL TO ACTION<br>(MOVIES)</br></a>
-            <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full hover:bg-red-500" href="#">CALL TO ACTION<br>(MOVIES)</br></a>
+        <div class="flex gap-8 lg:gap-12 mt-8 w-full h-20 lg:h-36 lg:justify-center">
+            <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full lg:w-1/4 lg:h-full hover:bg-red-500" href="./movies.html">CALL TO ACTION<br>(MOVIES)</br></a>
+            <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full lg:w-1/4 lg:h-full hover:bg-red-500" href="#">CALL TO ACTION<br>(MOVIES)</br></a>
         </div>
     </main>
 
-    <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs text-center justify-center items-center text-[#FFFFFF] w-full max-h-11">
+    <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs lg:text-xl text-center justify-center items-center text-[#FFFFFF] w-full max-h-11">
         <p class="text-center">MindHub - Cohort FS053 JAVA</p>
     </footer>
 
