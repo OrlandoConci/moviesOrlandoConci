@@ -8,22 +8,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Moviestack/Home</title>
 </head>
-<body class="bg-stone-900">
-    <header class="flex justify-between border border-white-500 bg-stone-800">
-        <div class="flex h-16 ml-8">
-            <img class="w-14 border object-cover border-white-500 rounded-full m-3" src="./resources/Moviestack_isotipo.png" title="logo" alt="logo de la página">
-            <img class="w-40  object-contain" src="./resources/Moviestack_logotipo2.png" title="nombre" alt="nombre de la página">
+
+<body class="bg-stone-900 min-h-screen flex flex-col w-full border">
+    <header class="bg-stone-800 p-2 min-h-11 flex justify-between items-center">
+        <div class="flex">
+            <img class="w-10 border object-cover border-white-500 rounded-full" src="./resources/Moviestack_isotipo.png" title="logo" alt="logo de la página">
+            <img class="w-24  object-contain" src="./resources/Moviestack_logotipo2.png" title="nombre" alt="nombre de la página">
         </div>
 
-        <nav class="flex gap-10 items-center mr-16">
-            <a class="font-[raleway] text-xl text-[#FFFFFF] border p-2" href="./main.html">HOME</a>
-            <a class="font-[raleway] text-xl text-[#FFFFFF]" href="./movies.html">MOVIES</a>
-            <a class="font-[raleway] text-xl text-[#FFFFFF]" href="#">FAVS</a>
+        <nav class="flex items-center gap-3">
+            <a class="font-[raleway] text-xs text-[#FFFFFF] border p-2" href="./main.html">HOME</a>
+            <a class="font-[raleway] text-xs text-[#FFFFFF]" href="./movies.html">MOVIES</a>
+            <a class="font-[raleway] text-xs text-[#FFFFFF]" href="#">FAVS</a>
         </nav>
     </header>
-    <footer class="border border-white-500 bg-stone-800 p-4 text-xl text-[#FFFFFF]">
+
+    <main class="flex flex-col justify-between items-center m-8">
+        <img class="w-full h-auto object-contain object-top" src="./resources/portada_moviestack.png" title="portada" alt="Portada de la página con películas">
+        <p class="text-center mt-8 text-white">¡Bienvenido a Moviestack! Tu destino cinematográfico definitivo. Explora nuestro
+             extenso catálogo de películas de todos los géneros. Desde clásicos atemporales 
+             hasta los estrenos más recientes, ofrecemos críticas, trailers, y recomendaci
+             ones personalizadas para satisfacer todos los gustos. Únete a nuestra comunidad
+             , comparte tus opiniones y descubre tu próxima película favorita en Moviestack.</p>
+        
+        <div class="flex gap-8 mt-8 w-full h-20">
+            <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full hover:bg-red-500" href="./movies.html">CALL TO ACTION<br>(MOVIES)</br></a>
+            <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full hover:bg-red-500" href="#">CALL TO ACTION<br>(MOVIES)</br></a>
+        </div>
+    </main>
+
+    <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs text-center justify-center items-center text-[#FFFFFF] w-full max-h-11">
         <p class="text-center">MindHub - Cohort FS053 JAVA</p>
     </footer>
-    
+
 </body>
 </html>
