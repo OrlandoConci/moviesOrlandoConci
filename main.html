@@ -10,16 +10,16 @@
 </head>
 
 <body class="bg-stone-900 min-h-screen flex flex-col w-full">
-    <header class="bg-stone-800 px-6 lg:px-11 py-2 min-h-11 flex justify-between items-center">
+    <header class="bg-stone-800 px-6 lg:px-11 py-2 min-h-11 flex justify-between items-center border border-white-500">
         <div class="flex">
             <img class="w-10 lg:w-14 border object-cover border-white-500 rounded-full" src="./resources/Moviestack_isotipo.png" title="logo" alt="logo de la página">
             <img class="w-24 lg:w-32 lg:ml-5 object-contain" src="./resources/Moviestack_logotipo2.png" title="nombre" alt="nombre de la página">
         </div>
 
         <nav class="flex items-center gap-3 lg:gap-10">
-            <a class="font-[raleway] text-xs lg:text-xl text-xs text-[#FFFFFF] border p-2" href="./main.html">HOME</a>
-            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF]" href="./movies.html">MOVIES</a>
-            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF]" href="#">FAVS</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] border p-2" href="./main.html">HOME</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="./movies.html">MOVIES</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="#">FAVS</a>
         </nav>
     </header>
 
@@ -35,6 +35,9 @@
             <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full lg:w-1/4 lg:h-full hover:bg-red-500" href="./movies.html">CALL TO ACTION<br>(MOVIES)</br></a>
             <a class="flex flex-col text-xs bg-stone-400 text-center justify-center w-full lg:w-1/4 lg:h-full hover:bg-red-500" href="#">CALL TO ACTION<br>(MOVIES)</br></a>
         </div>
+
+        <script src="./data.js"></script>
+        <script src="./index.js"></script>
     </main>
 
     <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs lg:text-xl text-center justify-center items-center text-[#FFFFFF] w-full max-h-11">
