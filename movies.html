@@ -26,7 +26,18 @@
     <main class="flex flex-col justify-between grow-[2] 2xl:m-16 items-center m-8">
         <h1 class="flex bg-stone-800 border border-white-500 w-full h-16 text-2xl text-white text-center justify-center items-center">MOVIES</h1>
         
-        <div id="contenedor" class="flex flex-wrap gap-8 justify-center w-full overflow-hidden my-8"></div>
+        <form id="formularioBusqueda" class="w-full m-11">
+            <fieldset class="flex flex-col items-center justify-center gap-5">
+                <select id="filtroGenero" name="filter" class="w-full bg-stone-800 border-2 text-white">
+                    <option disabled selected>Genre</option>
+                </select>
+
+                <search class="w-full">
+                    <input id="cajaIngreso" class="w-full border-2 px-5 bg-stone-800 text-white" name="Busqueda" type="text" placeholder="Search..">
+                </search>
+            </fieldset>
+        </form>
+        <div id="contenedor" class="flex flex-wrap gap-8 justify-center w-full overflow-hidden mb-8"></div>
 
         <script src="./data.js"></script>
         <script src="./index.js"></script>

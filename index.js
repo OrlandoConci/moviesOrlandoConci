@@ -16,7 +16,70 @@ function crearArticulo(peliculas, elemento) {
     elemento.innerHTML = fragment
 }
 
+// Muestra total
 const $divContenedor = document.getElementById("contenedor")
 crearArticulo(peliculas, $divContenedor)
 
-// fin
+// Filtro de búsqueda
+
+$filtroGenero = document.getElementById("filtroGenero")
+$cajaIngreso = document.getElementById("cajaIngreso")
+
+function obtenerGeneros(Peliculas) {
+    let generos = Peliculas
+        .map(pelicula => pelicula.genres)
+        .flat()
+        .filter((genres, indice, array) => array.indexOf(genres) == indice)
+    return generos
+}
+
+function crearSelect(genres) {
+    return ` <option value="${genres}">${genres}</option>`
+} 
+
+function crearOpciones(peliculas) {
+    const generos = obtenerGeneros(peliculas)
+    $filtroGenero.innerHTML += generos.reduce((templateAcumulado, generos) => templateAcumulado += crearSelect(generos), "")
+}
+
+crearOpciones(peliculas)
+
+$cajaIngreso.addEventListener("input", () => {
+    const peliculasFiltradasPorNombre = filtrarPeliculasPorNombre(peliculas, $cajaIngreso.value)
+    const peliculasFiltradasPorGenero = filtrarPeliculasPorGenero(peliculasFiltradasPorNombre)
+    if (peliculasFiltradasPorGenero.length != 0) {
+        crearArticulo(peliculasFiltradasPorGenero, $divContenedor)
+    } else {
+        $divContenedor.innerHTML = `<p class="font-[raleway] text-[#FFFFFF]">>> no hay resultados coincidentes <<</p>`
+    }
+})
+
+
+$filtroGenero.addEventListener('change', () => {
+    const peliculasFiltradasPorNombre = filtrarPeliculasPorNombre(peliculas, $cajaIngreso.value)
+    const peliculasFiltradasPorGenero = filtrarPeliculasPorGenero(peliculasFiltradasPorNombre)
+    if (peliculasFiltradasPorGenero.length != 0) {
+        crearArticulo(peliculasFiltradasPorGenero, $divContenedor)
+    } else {
+        $divContenedor.innerHTML = `<p class="font-[raleway] text-[#FFFFFF]">>> no hay resultados coincidentes <<</p>`
+    }
+})
+
+
+function filtrarPeliculasPorNombre(peliculas, nombreIngresado) {
+    return peliculas.filter(pelicula => pelicula.title.toLowerCase().includes(nombreIngresado.toLowerCase()))
+}
+
+function filtrarPeliculasPorGenero(peliculasFiltradasPorNombre) {
+    const seleccionado = $filtroGenero.options[$filtroGenero.selectedIndex].value
+    if (seleccionado == "Genre") {
+        return peliculasFiltradasPorNombre
+    }
+    return peliculasFiltradasPorNombre.filter(pelicula => pelicula.genres.includes(seleccionado))
+}
+
+// mejorar call to action
+// main x index.html
+// textos a inglés
+//agregar boton clean al filtro
+//RESPONSIVE
