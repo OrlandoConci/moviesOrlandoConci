@@ -1,20 +1,4 @@
-function agregaContenido(objeto) {
-    let articulo = `<article class="flex flex-col items-center bg-slate-600 text-white gap-3 p-1 border rounded-2xl w-1/6 min-w-72 overflow-hidden text-center">
-    <img class="w-72 h-52 object-contain" src="${objeto.image}" alt= "Una imágen ilustrativa de la película '${objeto.title}'" >
-    <h2 class=font-bold>${objeto.title}</h2>
-    <h3 class="italic">${objeto.tagline}</h3>
-    <p>${objeto.overview}</p>
-    </article>`
-    return articulo
-}
-
-function crearArticulo(peliculas, elemento) {
-    let fragment = ""
-    peliculas.forEach(pelicula => {
-        fragment += agregaContenido(pelicula)
-    })
-    elemento.innerHTML = fragment
-}
+import {crearArticulo} from './module/funciones.js'
 
 // Muestra total
 const $divContenedor = document.getElementById("contenedor")
@@ -50,7 +34,7 @@ $cajaIngreso.addEventListener("input", () => {
     if (peliculasFiltradasPorGenero.length != 0) {
         crearArticulo(peliculasFiltradasPorGenero, $divContenedor)
     } else {
-        $divContenedor.innerHTML = `<p class="font-[raleway] text-[#FFFFFF]">>> no hay resultados coincidentes <<</p>`
+        $divContenedor.innerHTML = `<p class=" font-[raleway] text-[#FFFFFF]">>> no matching results <<</p>`
     }
 })
 
@@ -61,7 +45,7 @@ $filtroGenero.addEventListener('change', () => {
     if (peliculasFiltradasPorGenero.length != 0) {
         crearArticulo(peliculasFiltradasPorGenero, $divContenedor)
     } else {
-        $divContenedor.innerHTML = `<p class="font-[raleway] text-[#FFFFFF]">>> no hay resultados coincidentes <<</p>`
+        $divContenedor.innerHTML = `<p class="font-[raleway] text-[#FFFFFF]">>> no matching results <<</p>`
     }
 })
 
@@ -78,8 +62,25 @@ function filtrarPeliculasPorGenero(peliculasFiltradasPorNombre) {
     return peliculasFiltradasPorNombre.filter(pelicula => pelicula.genres.includes(seleccionado))
 }
 
+// Limpiar búsqueda
+
+$botonClear = document.getElementById("botonClear")
+$botonClear.addEventListener("click", limpiarBusqueda)
+$formularioBusqueda = document.getElementById("formularioBusqueda")
+
+function limpiarBusqueda(e) {
+    e.preventDefault()
+    $formularioBusqueda.reset()
+    crearArticulo(peliculas, $divContenedor)
+}
+
+// Fin
+
+
 // mejorar call to action
 // main x index.html
 // textos a inglés
 //agregar boton clean al filtro
 //RESPONSIVE
+// Agregar validadro de ingreso ejercicios individuales
+//line clamp

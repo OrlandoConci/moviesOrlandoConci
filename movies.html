@@ -17,33 +17,39 @@
         </div>
 
         <nav class="flex items-center gap-3 lg:gap-10">
-            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="./main.html">HOME</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="./index.html">HOME</a>
             <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] border p-2" href="./movies.html">MOVIES</a>
             <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="#">FAVS</a>
         </nav>
     </header>
 
-    <main class="flex flex-col justify-between grow-[2] 2xl:m-16 items-center m-8">
+    <main class="flex flex-col grow-[2] 2xl:m-16 items-center m-8">
         <h1 class="flex bg-stone-800 border border-white-500 w-full h-16 text-2xl text-white text-center justify-center items-center">MOVIES</h1>
         
-        <form id="formularioBusqueda" class="w-full m-11">
+        <form id="formularioBusqueda" class="w-full m-11 md:w-80 lg:w-1/2">
             <fieldset class="flex flex-col items-center justify-center gap-5">
                 <select id="filtroGenero" name="filter" class="w-full bg-stone-800 border-2 text-white">
                     <option disabled selected>Genre</option>
                 </select>
 
-                <search class="w-full">
-                    <input id="cajaIngreso" class="w-full border-2 px-5 bg-stone-800 text-white" name="Busqueda" type="text" placeholder="Search..">
-                </search>
+                <div class="flex w-full items-center justify-center gap-5">
+                    <search class="w-full">
+                        <input id="cajaIngreso" class="w-full border-2 px-5 bg-stone-800 text-white" name="Busqueda" type="text" placeholder="Search..">
+                    </search>
+
+                    <button id="botonClear" class="border-2 px-5 bg-stone-800 text-white">Clear</button>
+                </div>
             </fieldset>
         </form>
+
         <div id="contenedor" class="flex flex-wrap gap-8 justify-center w-full overflow-hidden mb-8"></div>
 
         <script src="./data.js"></script>
-        <script src="./index.js"></script>
+        <script type="module" src="./index.js"></script>
+
     </main>
 
-    <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs lg:text-xl text-center justify-center items-center text-[#FFFFFF] w-full max-h-11">
+    <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs lg:text-xl justify-center items-center text-[#FFFFFF] w-full max-h-11">
         <p class="text-center">MindHub - Cohort FS053 JAVA</p>
     </footer>
 

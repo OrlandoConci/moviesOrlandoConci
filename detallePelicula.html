@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicio de streaming películas y series">
+    <link rel="shortcut icon" href="./resources/Moviestack_favicon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Moviestack/details</title>
+</head>
+
+<body class="bg-stone-900 min-h-screen flex flex-col w-full">
+    <header class="bg-stone-800 px-6 lg:px-11 py-2 min-h-11 flex justify-between items-center border border-white-500">
+        <div class="flex">
+            <img class="w-10 lg:w-14 border object-cover border-white-500 rounded-full" src="./resources/Moviestack_isotipo.png" title="logo" alt="logo de la página">
+            <img class="w-24 lg:w-32 lg:ml-5 object-contain" src="./resources/Moviestack_logotipo2.png" title="nombre" alt="nombre de la página">
+        </div>
+
+        <nav class="flex items-center gap-3 lg:gap-10">
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="./index.html">HOME</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] border p-2" href="./movies.html">MOVIES</a>
+            <a class="font-[raleway] text-xs lg:text-xl text-[#FFFFFF] hover:underline" href="#">FAVS</a>
+        </nav>
+    </header>
+
+    <main class="flex grow-[2] items-center w-full">
+
+        <div id="contenedorDetalles" class="flex flex-wrap my-8 justify-center w-full"></div>
+
+        <script src="./data.js"></script>
+        <script src="./detallePelicula.js"></script>
+    </main>
+
+    <footer class="flex border border-white-500 bg-stone-800 p-4 text-xs lg:text-xl text-center justify-center items-center text-[#FFFFFF] w-full max-h-11">
+        <p class="text-center">MindHub - Cohort FS053 JAVA</p>
+    </footer>
+
+</body>
+</html>
