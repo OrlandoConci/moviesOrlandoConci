@@ -3,8 +3,6 @@ const $contenedorDetalles = document.getElementById("contenedorDetalles")
 const queryParams = new URLSearchParams(location.search)
 const id = queryParams.get("id")
 
-console.log(id)
-
 const pelicula = peliculas.find( pelicula => pelicula.id == id ) 
 
 $contenedorDetalles.innerHTML = `
@@ -34,7 +32,7 @@ $contenedorDetalles.innerHTML = `
                     </tr>
                     <tr>
                         <td class="border-2 p-5">runtime</td>
-                        <td class="border-2">${pelicula.runtime}</td>
+                        <td class="border-2">${pelicula.runtime} mins</td>
                     </tr>
                     <tr>
                         <td class="border-2 p-5">status</td>
@@ -49,15 +47,15 @@ $contenedorDetalles.innerHTML = `
                 <tbody>
                     <tr>
                         <td class="border-2 p-5">vote average</td>
-                        <td class="border-2">${pelicula.vote_average}</td>
+                        <td class="border-2">${pelicula.vote_average.toFixed(2)} %</td>
                     </tr>
                     <tr>
                         <td class="border-2 p-5">budget</td>
-                        <td class="border-2">${pelicula.budget}</td>
+                        <td class="border-2">USD ${pelicula.budget.toLocaleString( 'en-US', { style:'currency', currency:'USD' } )}</td>
                     </tr>
                     <tr>
                         <td class="border-2 p-5">revenue</td>
-                        <td class="border-2">${pelicula.revenue}</td>
+                        <td class="border-2">USD  ${pelicula.revenue.toLocaleString( 'en-US', { style:'currency', currency:'USD' } )}</td>
                     </tr>
                 </tbody>
             </table>
@@ -66,3 +64,5 @@ $contenedorDetalles.innerHTML = `
 
 </article>
 `
+
+// Fin

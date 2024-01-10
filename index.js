@@ -6,8 +6,8 @@ crearArticulo(peliculas, $divContenedor)
 
 // Filtro de búsqueda
 
-$filtroGenero = document.getElementById("filtroGenero")
-$cajaIngreso = document.getElementById("cajaIngreso")
+const $filtroGenero = document.getElementById("filtroGenero")
+const $cajaIngreso = document.getElementById("cajaIngreso")
 
 function obtenerGeneros(Peliculas) {
     let generos = Peliculas
@@ -64,9 +64,9 @@ function filtrarPeliculasPorGenero(peliculasFiltradasPorNombre) {
 
 // Limpiar búsqueda
 
-$botonClear = document.getElementById("botonClear")
+const $botonClear = document.getElementById("botonClear")
 $botonClear.addEventListener("click", limpiarBusqueda)
-$formularioBusqueda = document.getElementById("formularioBusqueda")
+const $formularioBusqueda = document.getElementById("formularioBusqueda")
 
 function limpiarBusqueda(e) {
     e.preventDefault()
@@ -75,12 +75,3 @@ function limpiarBusqueda(e) {
 }
 
 // Fin
-
-
-// mejorar call to action
-// main x index.html
-// textos a inglés
-//agregar boton clean al filtro
-//RESPONSIVE
-// Agregar validadro de ingreso ejercicios individuales
-//line clamp
